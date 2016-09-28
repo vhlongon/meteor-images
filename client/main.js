@@ -3,6 +3,7 @@
 //import the React library
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 
 import ImageList from './components/ImageList';
 
@@ -23,4 +24,12 @@ Meteor.startup(() => {
     <App />,
     document.querySelector('.container')
   );
+  // Make a request for a user with a given ID
+  axios.get('https://api.imgur.com/3/gallery/hot/viral/0')
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 });

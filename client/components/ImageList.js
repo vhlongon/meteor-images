@@ -12,7 +12,7 @@ const IMAGES = [
 // Creeate our image list component
 const ImageList = (props) => {
   // {image} is the same as image={image} with ES6 we can shorten that
-  const RenderedImages = IMAGES.map( (image) => <ImageDetail image={image} /> );
+  const RenderedImages = IMAGES.map( (image, i) => <ImageDetail image={image} key={i} /> );
 
   return (
     <ul className="media-list list-group">
