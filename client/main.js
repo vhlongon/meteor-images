@@ -7,13 +7,20 @@ import axios from 'axios';
 
 import ImageList from './components/ImageList';
 
-//Create a component
-const App = (props) => {
-  return (
-    <div>
-      <ImageList />
-    </div>
-  );
+//Create the root component
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  render = () => {
+    return (
+      <div>
+        <ImageList />
+      </div>
+    );
+  }
 }
 
 
