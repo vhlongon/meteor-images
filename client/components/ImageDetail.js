@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ImageScore from './ImageScore';
 
 // Creeate our image list component
 // or we could destructur the param like { image: { link, title } }
@@ -13,6 +14,8 @@ const ImageDetail = ({image}) => {
         <h4 className="media-heading">
           {image.title}
         </h4>
+        <p>{image.description}</p>
+        <ImageScore ups={image.ups} downs={image.downs} />
       </div>
     </li>
   );
