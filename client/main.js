@@ -4,12 +4,17 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
+import ImageList from './components/ImageList'
+
 //Create a component
 const App = (props) => {
   return (
-    <div>Hello world!</div>
+    <div>
+      <ImageList />
+    </div>
   );
 }
+
 
 //Render this component to the screen
 // this says " wait until meteor is done with its stuff to run our code"
