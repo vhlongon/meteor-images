@@ -2,17 +2,12 @@ import React, {Component} from 'react';
 import ImageDetail from './ImageDetail';
 
 
-const IMAGES = [
-  {title: 'Pen', link: 'http://dummyimage.com/600x400' },
-  {title: 'Pine Tree', link: 'http://dummyimage.com/600x500' },
-  {title: 'Mug', link: 'http://dummyimage.com/600x600' }
-]
-
-
 // Creeate our image list component
 const ImageList = (props) => {
   // {image} is the same as image={image} with ES6 we can shorten that
-  const RenderedImages = IMAGES.map( (image, i) => <ImageDetail image={image} key={i} /> );
+  // first we filter out image objs that are actually albums and then build the return html with the valid ones
+  const RenderedImages = props.images.filter(image => !image.is_album)
+    .map( (image, i) => <ImageDetail image={image} key={i} /> );
 
   return (
     <ul className="media-list list-group">
