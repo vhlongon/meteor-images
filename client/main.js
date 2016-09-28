@@ -4,7 +4,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import ImageList from './components/ImageList'
+import ImageList from './components/ImageList';
 
 //Create a component
 const App = (props) => {
